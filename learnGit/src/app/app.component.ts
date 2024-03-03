@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import Users from './user.model';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'learnGit';
+  public users: Users[] = [
+    {
+      firstName: "teacher", 
+      lastName: "teacher",
+      isLikeAngular: true
+    }
+  ]
 }
