@@ -15,6 +15,16 @@ export class AppComponent {
       firstName: "teacher", 
       lastName: "teacher",
       isLikeAngular: true
+    },
+    {
+      firstName: "Rachel", 
+      lastName: "Weiss",
+      isLikeAngular: true
+    },
+    {
+      firstName: "Racheli", 
+      lastName: "Margalit",
+      isLikeAngular: true
     }
   ]
 }
