@@ -10,10 +10,10 @@ import Users from './user.model';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+public clickToUpdate =false;
 
 public updateDetails(user : Users){
-  
-
+  this.clickToUpdate=true;
 
 }
 
