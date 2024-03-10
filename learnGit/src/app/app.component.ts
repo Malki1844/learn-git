@@ -12,19 +12,41 @@ import Users from './user.model';
 export class AppComponent {
   public users: Users[] = [
     {
-      firstName: "teacher", 
+      firstName: "teacher",
       lastName: "teacher",
       isLikeAngular: true
     },
     {
-      firstName: "Rachel", 
+      firstName: "Rachel",
       lastName: "Weiss",
       isLikeAngular: true
     },
     {
-      firstName: "Racheli", 
+      firstName: "Racheli",
       lastName: "Margalit",
       isLikeAngular: true
-    }
-  ]
+    },
+  ];
+  
+ 
+
+  constructor() {
+    this.sortUsersByLastName();
+  }
+  // sortedUsers: Users[];
+  
+  sortUsersByLastName(): void {
+    this.users = [...this.users].sort((a, b) => a.lastName.localeCompare(b.lastName));
+}
+ 
+
+  // filterList: any[];
+
+  // constructor() {
+  //   this.sortList(this.users.lastName);
+  // }
+  // sortList(name: string): void {
+  //   this.filterList = this.users.filter(user => user.lastName === name)
+  // }
+
 }
