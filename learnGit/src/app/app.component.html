@@ -1,4 +1,5 @@
 <ul>
+  <input type="text" name="searchName" [(ngModel)]="searchInput" (input)="filterUsers()">
   @for (user of users; track $index) {
   <div style="border: 1px solid green;">
     <li>
