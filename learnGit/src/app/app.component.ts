@@ -14,7 +14,7 @@ export class AppComponent {
     {
       firstName: "teacher", 
       lastName: "teacher",
-      isLikeAngular: true
+      isLikeAngular: false
     },
     {
       firstName: "Rachel", 
