@@ -11,14 +11,18 @@ import Users from './user.model';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent { 
   public users!: Users[]
-  constructor(private _service: StudentServiceService) {
-    this._service.getUsers().then((res) => { this.users = res })
-  }
-
   public isShown = false;
   public selectedOption = true
+
+  constructor(private _service: StudentServiceService) {
+    this._service.getUsers().then((res) => { 
+      this.users = res;
+      this.sortUsersByLastName(); 
+    })
+  }
+
   public showList() {
     if (this.selectedOption== true){
       this.isShown = this.selectedOption;
@@ -27,4 +31,8 @@ export class AppComponent {
       this.isShown= false;
     }
   }
+
+  sortUsersByLastName(): void {
+    this.users = [...this.users].sort((a, b) => a.lastName.localeCompare(b.lastName));
+}
 }
