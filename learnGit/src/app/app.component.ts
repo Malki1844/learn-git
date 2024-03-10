@@ -14,7 +14,7 @@ export class AppComponent {
     {
       firstName: "teacher", 
       lastName: "teacher",
-      isLikeAngular: true
+      isLikeAngular: false
     },
     {
       firstName: "Rachel", 
@@ -25,6 +25,86 @@ export class AppComponent {
       firstName: "Racheli", 
       lastName: "Margalit",
       isLikeAngular: true
+    },
+    {
+      firstName: "Avital", 
+      lastName: "Stiinemetz",
+      isLikeAngular: true
+    },
+    {
+      firstName: "Malki", 
+      lastName: "Markson",
+      isLikeAngular: true
+    }, {
+      firstName: "Sara", 
+      lastName: "Molcho",
+      isLikeAngular: false
+    }, {
+      firstName: "Dasi", 
+      lastName: "Genut",
+      isLikeAngular: true
+    }, {
+      firstName: "Chani", 
+      lastName: "Bloch",
+      isLikeAngular: true
+    }, {
+      firstName: "Michal", 
+      lastName: "Frisbeg",
+      isLikeAngular: false
+    }, {
+      firstName: "Mimi", 
+      lastName: "Brenig",
+      isLikeAngular: true
+    }, {
+      firstName: "Shiri", 
+      lastName: "Miler",
+      isLikeAngular: true
+    }, {
+      firstName: "Malki", 
+      lastName: "Krmlovski",
+      isLikeAngular: false
+    }, {
+      firstName: "Shulamit", 
+      lastName: "Rozntal",
+      isLikeAngular: true
+    }, {
+      firstName: "Michal", 
+      lastName: "Amir",
+      isLikeAngular: true
+    }, {
+      firstName: "Tzipi", 
+      lastName: "Elfer",
+      isLikeAngular: false
+    },
+    {
+      firstName: "Tammar", 
+      lastName: "Malik",
+      isLikeAngular: true
+    },{
+      firstName: "Avigil", 
+      lastName: "Eleg",
+      isLikeAngular: true
+    },{
+      firstName: "Ayelet", 
+      lastName: "Royter",
+      isLikeAngular: true
+    },{
+      firstName: "Orit", 
+      lastName: "Rabbi",
+      isLikeAngular: false
+    },{
+      firstName: "Michal", 
+      lastName: "Vinstok",
+      isLikeAngular: true
+    },
+    {
+      firstName: "Hadas", 
+      lastName: "Zilberberg",
+      isLikeAngular: true
+    },{
+      firstName: "Shira", 
+      lastName: "Zilberberg",
+      isLikeAngular: false
     }
   ]
 }
