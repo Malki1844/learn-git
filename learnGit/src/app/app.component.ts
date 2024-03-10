@@ -15,16 +15,19 @@ export class AppComponent {
       firstName: "teacher", 
       lastName: "teacher",
       isLikeAngular: false
+      adress: "Tel Aviv Arlozorov 12",
     },
     {
       firstName: "Rachel", 
       lastName: "Weiss",
+      adress: "Bnei-Brak Rabi Akiva 82",
       isLikeAngular: true
     },
     {
       firstName: "Racheli", 
       lastName: "Margalit",
-      isLikeAngular: true
+      adress: "Jerusalem Yafo 52",
+      isLikeAngular: true 
     }
   ]
 }
