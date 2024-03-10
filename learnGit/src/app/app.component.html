@@ -1,7 +1,8 @@
 <ul>
   <h1>Our lovely stodents' list :)</h1>
   @for (user of users; track $index) {
-  <div style="border: 1px solid green;" [class.like]="user.isLikeAngular" [class.dontLike]="!user.isLikeAngular">
+  <div style="border: 1px solid green;" [class.like]="user.isLikeAngular" [class.dontlike]="!user.isLikeAngular">
+
     <li>
       <h1>first name</h1>
       <h3>{{user.firstName}}</h3>
