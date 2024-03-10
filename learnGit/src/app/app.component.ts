@@ -12,22 +12,22 @@ import Users from './user.model';
 export class AppComponent {
   public users: Users[] = [
     {
-      firstName: "teacher", 
+      firstName: "teacher",
       lastName: "teacher",
       adress: "Tel Aviv Arlozorov 12",
       isLikeAngular: true
     },
     {
-      firstName: "Rachel", 
+      firstName: "Rachel",
       lastName: "Weiss",
       adress: "Bnei-Brak Rabi Akiva 82",
       isLikeAngular: true
     },
     {
-      firstName: "Racheli", 
+      firstName: "Racheli",
       lastName: "Margalit",
       adress: "Jerusalem Yafo 52",
-      isLikeAngular: true 
+      isLikeAngular: true
     }
   ]
 }
