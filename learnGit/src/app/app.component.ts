@@ -10,6 +10,13 @@ import Users from './user.model';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+public updateDetails(user : Users){
+  
+
+
+}
+
   public users: Users[] = [
     {
       firstName: "teacher", 
