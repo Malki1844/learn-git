@@ -17,7 +17,64 @@
       🥲
       }
     </li>
-    <button (click)> "updateDetails(user)" Update details</button>
+    <button (click)> "updateDetails(user)" Update details </button>
+    @if(clickToUpdate){
+
+      <form #updateForm="ngModel">
+        <div>
+         <label>lastName</label>   
+    <input name="lastName" type="text" #lastNameFromId ="ngModel" 
+     [(ngModel)]="user.lastName" required minlength="2">
+    
+    @if(lastNameFromId.errors?.['minlength']){
+     <div>
+        you mast write at list 2 chars
+     </div>
+    }
+     @if(lastNameFromId.errors?.['required']){
+     <div>
+     this filed us required
+     </div>
+    }
+    </div>
+    <div>
+        <label>firstName</label> 
+    <input name="firstName" type="text"  #firstNameFromId [(ngModel)]="resident.firstName" required minlength="2">
+    @if(firstNameFromId.errors?.['minlength']){
+        <div>
+           you mast write at list 2 chars
+        </div>
+       }
+        @if(firstNameFromId.errors?.['required']){
+        <div>
+        this filed us required
+        </div>}
+    </div>
+        <div>
+            <label>Address</label> 
+    <input name="address" type="text"  #addresFromId[(ngModel)]="resident.address" required>
+    
+        @if(addresFromId.errors?.['required']){
+        <div>
+        this filed us required
+        </div>}
+    </div>
+    <div>
+        <label>isLikeAngular</label> 
+    
+    @if(isLikeAngular.errors?.['required']){
+        <div>
+        this filed us required
+        </div>}
+    </div>
+    <button [disabled]= "!updateForm.valid" (click)="sava()" >save</button>
+    </form>
+    
+
+
+    }
+
+                                                       
   </div>
   }
 </ul>
