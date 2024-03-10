@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { StudentServiceService } from './student-service.service';
 import Users from './user.model';
 
 @Component({
@@ -10,21 +11,26 @@ import Users from './user.model';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  public users: Users[] = [
-    {
-      firstName: "teacher", 
-      lastName: "teacher",
-      isLikeAngular: true
-    },
-    {
-      firstName: "Rachel", 
-      lastName: "Weiss",
-      isLikeAngular: true
-    },
-    {
-      firstName: "Racheli", 
-      lastName: "Margalit",
-      isLikeAngular: true
-    }
-  ]
+  public users!: Users[]
+  constructor(private _service: StudentServiceService) {
+    this._service.getUsers().then((res) => { this.users = res })
+  }
+
+  //  = [
+  //   {
+  //     firstName: "teacher", 
+  //     lastName: "teacher",
+  //     isLikeAngular: true
+  //   },
+  //   {
+  //     firstName: "Rachel", 
+  //     lastName: "Weiss",
+  //     isLikeAngular: true
+  //   },
+  //   {
+  //     firstName: "Racheli", 
+  //     lastName: "Margalit",
+  //     isLikeAngular: true
+  //   }
+  // ]
 }
