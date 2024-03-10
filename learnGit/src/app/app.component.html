@@ -1,6 +1,7 @@
 <ul>
   @for (user of users; track $index) {
-  <div style="border: 1px solid green;">
+  <div style="border: 1px solid green;" class="center">
+
     <li>
       <h1>first name</h1>
       <h3>{{user.firstName}}</h3>
@@ -10,6 +11,7 @@
       <h3>{{user.firstName}}</h3>
       <h1>did you like learn angular?</h1>
       <h3>{{user.isLikeAngular}}</h3>
+      
       @if (user.isLikeAngular) {
       😊
       }
