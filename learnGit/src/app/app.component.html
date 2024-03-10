@@ -1,3 +1,9 @@
+<select [(ngModel)]="selectedOption">
+  <option value="true">true</option>
+  <option value="false">false</option>
+</select>
+<button type="submit" (click)="showList()">submit</button>
+@if(isShown){
 <ul>
   @for (user of users; track $index) {
   <div style="border: 1px solid green;">
@@ -20,3 +26,4 @@
   </div>
   }
 </ul>
+}
