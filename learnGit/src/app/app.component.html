@@ -1,33 +1,35 @@
-<select [(ngModel)]="selectedOption">
-  <option value="true">true</option>
-  <option value="false">false</option>
-</select>
-<button type="submit" (click)="showList()">submit</button>
-@if(isShown){
-<ol>
-  <h1>Our lovely stodents' list :)</h1>
-  @for (user of users; track $index) {
-  <div style="border: 1px solid green;" class="center" [class.like]="user.isLikeAngular" [class.dontlike]="!user.isLikeAngular">
-    <li>
-      <h1>first name</h1>
-      <h3>{{user.firstName}}</h3>
-      <h1>last name</h1>
-      <h3>{{user.lastName}}</h3>
-      <h1>first name</h1>
-      <h3>{{user.firstName}}</h3>
-      <h1>did you like learn angular?</h1>
-      <h1>Adress</h1>
-      <h3>{{user.adress}}</h3>
-      <h3>{{user.isLikeAngular}}</h3>
-      @if (user.isLikeAngular) {
-      😊
-      }
-      @else {
-      🥲
-      }
-    </li>
-  </div>
+<div class="center">
+  <select [(ngModel)]="selectedOption">
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
+  <button type="submit" (click)="showList()">submit</button>
+  @if(isShown){
+  <ol>
+    <h1>Our lovely stodents' list :)</h1>
+    @for (user of users; track $index) {
+    <div style="border: 1px solid green;" [class.like]="user.isLikeAngular" [class.dontlike]="!user.isLikeAngular">
+      <li>
+        <h1>first name</h1>
+        <h3>{{user.firstName}}</h3>
+        <h1>last name</h1>
+        <h3>{{user.lastName}}</h3>
+        <h1>first name</h1>
+        <h3>{{user.firstName}}</h3>
+        <h1>did you like learn angular?</h1>
+        <h1>Adress</h1>
+        <h3>{{user.adress}}</h3>
+        <h3>{{user.isLikeAngular}}</h3>
+        @if (user.isLikeAngular) {
+        😊
+        }
+        @else {
+        🥲
+        }
+      </li>
+    </div>
+    }
+  </ol>
   }
-</ol>
-}
- <p>All students: {{ getUsersCount() }}</p>
+  <p>All students: {{ getUsersCount() }}</p>
+</div>
