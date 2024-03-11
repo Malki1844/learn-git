@@ -137,4 +137,8 @@ export class StudentServiceService {
   public getUsers(): Observable<Users[]> {
     return this.$source
   }
+
+  public getUsersCount(): number {
+    return this.users.length;
+  }
 }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-
 import { StudentServiceService } from './student-service.service';
 import Users from './user.model';
 
@@ -40,5 +39,9 @@ export class AppComponent {
 
   sortUsersByLastName(): void {
     this.users = [...this.users].sort((a, b) => a.lastName.localeCompare(b.lastName));
+  }
+
+  getUsersCount(): number {
+    return this._service.getUsersCount();
   }
 }
